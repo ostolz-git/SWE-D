@@ -1,0 +1,30 @@
+Term,Description
+UserManager,"This manager class is responsible to create, delete and find users from/of the main server."
+User,"This class is used to model basic user information like first name, last name etc. Its purpose to provide common information for our different types of users (e.g. employees or customers) of our escooter service."
+Ticket,"Represents a support ticket opened by a customer which can be replied to by an employee. It contains additional attributes like the creation date, a category, and its priority."
+StationReport,"Represents a monthly report including scooters currently located at the station, and the number of drop-offs and rentals on a station."
+Station,"This class represents a station where the escooters can be picked up by customers, or service employees can deploy the escooters. Its purpose store information about where this station is located and how many escooter should be deployed there in general."
+ServiceEmployee,"This class represents a service employee who is responsible for rentals and maintenance. A service employee may have several technical skills and a maintenance queue with escooters which require maintenance. The service employee will be also used to classify service employees as such internally. For example, to determine whether an employee can modify escooter maintenance information."
+ScooterModel,"This class represents a model of an escooter. It includes data like manufacturer, battery capacity, etc. Its purpose is to portray the different escooter models."
+ScooterLocation,This class is used to represent the temporary location of an escooter. It includes the GPS coordinates (latitude and longitude) and a timestamp.
+ScooterFleet,"This manager class is responsible to create, delete and find escooters and scooter models."
+Reservation,This class represents a reservation of an escooter. Its purpose is to store the reservation timestamp of escooters to limit customers from reserving escooters too frequently and determine whether a reservation has expired.
+RentalObject,"This class represents a specific escooter which can be rented by a customer. It includes attributes like license plate, last maintenance date, etc. Its purpose is to provide logistic-, maintenance- and management information about the rental object/escooter."
+RentalManager,This manager class is responsible for managing escooter rentals and reservations.
+Rental,"This class represents a rental which includes start time, end time and a unique id as attributes. It is used to manage the rents of the escooter system."
+PayPalPaymentMethod,This class represents the information needed for a PayPal payment. Its purpose is to provide customers with a PayPal payment method.
+PaymentMethod,This class is an abstract payment method representation. Its purpose is to be concretised by the specific payment methods our escooter service offers.
+PaymentInformation,This class represents customer payment information. It's used to store payment information for a customer account. It consists of an address and the payment methods the customer has configured.
+Maintenance,"This class is used to manage a collection of escooters which are planned to receive maintenance at a specified date. It includes attributes like the maintenance date, assigned escooters and the involved service employee. Its purpose is to provide maintenance information for the ScooterFleet class."
+InvoiceManager,Responsible for creating and managing invoices. Also provides operations to retrieve invoices or a payment sum for a customer.
+Invoice,"Represents an invoice for previous rentals. Primarily used for customers to view their invoices. Contains data such as the price, the time and date, and the payment method used."
+FAQ,Represents a frequently asked question and a predefined answer for customers.
+Employee,This class represents an employee of our escooter service. Each employee has a phone number.
+DebitCardPaymentMethod,This class represents the information needed for a debit card payment. Its purpose is to provide customers with a debit card payment method.
+DamageReport,"This class represents a damage report which an accounting employee reports. It includes attributes like a description, date and the type of damage. Its purpose is to provide damage report information for a damaged scooter."
+CustomerSupportManager,This manager class is responsible to create and find tickets on the main server. FAQs are also created and managed.
+Customer,"This class represents a customer who can rent and reserve escooters. Each customer has a customerId and an account which is used for actions involving the customer, e.g. rentals or reservations."
+CreditCardPaymentMethod,This class represent the information needed for a credit card payment. Its purpose is to provide customers with a credit card payment method.
+Address,"This class represents an address, which includes attributes like street, house number, zip etc. It's used to model the address of a user and their payment address."
+AccountingEmployee,"This class represents an accounting employee who is responsible for rentals and payment. Each accounting employee has their SAP account ID. The accounting employee will be also used to classify accounting employees as such internally. For example, to determine whether an employee can modify customer account information."
+Account,This class represents an account which belongs to a customer. It includes attributes like balance and payment information. Its purpose is to contain general customer- and payment information.
